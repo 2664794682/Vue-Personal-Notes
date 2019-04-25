@@ -60,7 +60,7 @@
                     */
                     var comment = {id: Date.now(), user: this.user, content: this.content}
 
-                    var list = JSON.parse(localStorage.getItem('cmts' || '[]'))
+                    var list = JSON.parse(localStorage.getItem('cmts') || '[]')
                     list.unshift(comment)
                     localStorage.setItem('cmts', JSON.stringify(list))
 
@@ -84,7 +84,7 @@
             },
             methods: {
                 loadComments(){
-                    var list = JSON.parse(localStorage.getItem('cmts' || '[]'))
+                    var list = JSON.parse(localStorage.getItem('cmts') || '[]')
                     this.list = list
                 }    
             },
